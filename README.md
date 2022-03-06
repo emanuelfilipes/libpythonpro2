@@ -2,6 +2,8 @@
 Módulo para exemplificar a criação de projetos Python no curso PyTools 
 Nesse curso e ensinado como contribuir com projetos de codigo aberto
 
+[![Python application](https://github.com/emanuelfilipes/libpythonpro2/actions/workflows/libpythonpro.yml/badge.svg)](https://github.com/emanuelfilipes/libpythonpro2/actions/workflows/libpythonpro.yml)
+
 Suportada a versao 3 de Python
 
 Tópicos a serem abordados:

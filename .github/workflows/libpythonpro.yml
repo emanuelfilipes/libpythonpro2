@@ -22,3 +22,6 @@ jobs:
     - name: Lint with flake8
       run: | 
         pipenv run flake8 .
+    - name: Testes com pytest
+      run: | 
+        pipenv run pytest libpythonprotwo

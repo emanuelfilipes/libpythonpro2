@@ -18,7 +18,7 @@ jobs:
     - name: Instalar Dependências
       run: |
         pip install pipenv
-        pipenv install -r requirements-dev.txt codecov
+        pipenv install -r requirements-dev.txt
     - name: Lint with flake8
       run: | 
         pipenv run flake8 .

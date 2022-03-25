@@ -12,6 +12,7 @@ attrs==21.4.0
 pytest==7.1.1
 
 # Coverage
+codecov==2.1.12
 coverage==6.3.2
 pytest-cov==3.0.0
 

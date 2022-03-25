@@ -10,23 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.9
-    - name: Instalar Dependências
-      run: |
-        pip install pipenv
-        pipenv install -r requirements-dev.txt
-    - name: Lint with flake8
-      run: | 
-        pipenv run flake8 .
-    - name: Testes com pytest
-      run: | 
-        pipenv run pytest libpythonprotwo --cov=pypro
-    - name: Posting Coverage
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      run: | 
-        pipenv run codecov
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Instalar Dependências
+        run: |
+          pip install -r requirements-dev.txt
+      - name: Lint with flake8
+        uses: py-actions/flake8@v1
+        with:
+          checkName: 'flake8_py3'
+      - name: Testes com pytest
+        run: | 
+          pytest --cov=libpythonprotwo
+      - name: Posting Coverage
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: | 
+          codecov
